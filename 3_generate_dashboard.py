@@ -876,7 +876,11 @@ def build_lookup_panel(df):
   window.lkClear = function(){{
     document.getElementById('lk-route').value='';
     document.getElementById('lk-stop').value='';
-    showDefault();
+    document.getElementById('lk-msg').style.display='none';
+    document.getElementById('lk-table-wrap').style.display='none';
+    document.getElementById('lk-stats').style.display='none';
+    document.getElementById('lk-idle').style.display='block';
+    cur=[]; page=1;
   }};
 
   window.lkPage = function(p){{
@@ -905,7 +909,6 @@ def build_lookup_panel(df):
     document.getElementById('lk-table-wrap').style.display='block';
   }}
 
-  showDefault();
 }})();
 </script>
 """.format(
